@@ -11,12 +11,60 @@ import Layout from '../layouts/Layout.astro';
 		<p>I got my start in product design at IBM, where I contributed to a variety of enterprise software product releases across different organizations during my 4.5 year tenure. During that time, I also had the unique opportunity to contract with Apple in Cupertino where I focused on prototyping apps for the Apple at Work program.</p>
 		<h2>Work</h2>
 		<ul role="list" class="list-strip">
-			<li>The.com</li>
-			<li>Ind. (Handshake, OpenTable, Slice)</li>
-			<li>QA Wolf</li>
-			<li>InVision</li>
-			<li>Apple</li>
-			<li>IBM</li>
+			<div class="list-item--bordered">
+				<span class="list-item--border"></span>
+				<li class="list-item--icon">
+					<object class="list-item__icon" type="image/svg+xml" data="TheDotCom.svg"></object>
+					<span class="flex--fill-container list-item--title">The.com</span>
+					<span class="flex--hug-content list-item--role">Staff Designer</span>
+					<span class="flex--hug-content list-item--date">2022–&nbsp;&nbsp;</span>
+				</li>
+			</div>
+			<div class="list-item--bordered">
+				<span class="list-item--border"></span>
+				<li class="list-item--icon">
+					<object class="list-item__icon" type="image/svg+xml" data="OpenTable.svg"></object>
+					<span class="flex--fill-container list-item--title">OpenTable</span>
+					<span class="flex--hug-content list-item--role">Sr. Product Designer</span>
+					<span class="flex--hug-content list-item--date">2021–22</span>
+				</li>
+			</div>
+			<div class="list-item--bordered">
+				<span class="list-item--border"></span>
+				<li class="list-item--icon">
+					<object class="list-item__icon" type="image/svg+xml" data="QAWolf.svg"></object>
+					<span class="flex--fill-container list-item--title">QA Wolf</span>
+					<span class="flex--hug-content list-item--role">Founding Designer</span>
+					<span class="flex--hug-content list-item--date">2021&nbsp;&nbsp;&nbsp;</span>
+				</li>
+			</div>
+			<div class="list-item--bordered">
+				<span class="list-item--border"></span>
+				<li class="list-item--icon">
+					<object class="list-item__icon" type="image/svg+xml" data="InVision.svg"></object>
+					<span class="flex--fill-container list-item--title">InVision</span>
+					<span class="flex--hug-content list-item--role">Sr. Product Designer</span>
+					<span class="flex--hug-content list-item--date">2018–20</span>
+				</li>
+			</div>
+			<div class="list-item--bordered">
+				<span class="list-item--border"></span>
+				<li class="list-item--icon">
+					<object class="list-item__icon" type="image/svg+xml" data="Apple.svg"></object>
+					<span class="flex--fill-container list-item--title">Apple</span>
+					<span class="flex--hug-content list-item--role">Product Designer</span>
+					<span class="flex--hug-content list-item--date">2016&nbsp;&nbsp;&nbsp;</span>
+				</li>
+			</div><div class="list-item--bordered">
+				<span class="list-item--border"></span>
+				<li class="list-item--icon">
+					<object class="list-item__icon" type="image/svg+xml" data="IBM.svg"></object>
+					<span class="flex--fill-container list-item--title">IBM</span>
+					<span class="flex--hug-content list-item--role">Product Designer</span>
+					<span class="flex--hug-content list-item--date">2014–18</span>
+				</li>
+				<span class="list-item--border"></span>
+			</div>
 		</ul>
 		<h2>Talks & Interviews</h2>
 		<ul role="list" class="list-strip">
@@ -59,17 +107,63 @@ import Layout from '../layouts/Layout.astro';
 		list-style-type: none;
 	}
 
-	/* .instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
+	.list-item--icon {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		column-gap: var(--spacing-08);
+		padding: var(--spacing-08) 0;
 	}
 
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	} */
+	.list-item--bordered {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.list-item--border {
+		width: 100%;
+		border-top: 1px dashed var(--color-border);
+		border-bottom: 0;
+	}
+
+	.flex--fill-container {
+		flex-grow: 1;
+		flex-shrink: 0;
+	}
+
+	.flex--hug-content {
+		flex-shrink: 1;
+	}
+
+	.list-item__icon {
+		width: 24px;
+		height: 24px;
+	}
+
+	.list-item--title {
+		font-weight: 500;
+	}
+
+	.list-item--role {
+		color: var(--color-text-2);
+		text-align: right;
+	}
+	
+	.list-item--date {
+		flex: none;
+		color: var(--color-text-3);
+		text-align: right;
+		font-family: var(--font-mono);
+		font-size: 15px;
+	}
+
+	@media only screen and (min-width: 560px) {
+		.list-item--date {
+			font-size: 17px;
+		}
+		.list-item--icon {
+			column-gap: var(--spacing-12);
+			padding: var(--spacing-12) 0;
+		}
+	}
 </style>
