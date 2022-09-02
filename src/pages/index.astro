@@ -6,9 +6,9 @@ import Layout from '../layouts/Layout.astro';
 	<main>
 		<h1>Hey, I’m Matthew</h1>
 		<p>I’m a product designer, researcher, and front-end engineer. I’m currently a staff product designer at The.com, building new web tools for new web people.</p>
-		<p>Before The.com, I was the founding designer for QA Wolf. I helped take their existing CLI tool from 0–1, designing a web app & platform for QA Engineers to automate their end-to-end browser testing. I also designed the documentation website, marketing website, and helped develop their pricing structure that led to their first cohort of paying customers.</p>
-		<p>Prior to that, I designed tools to improve designer & developer collaboration at InVision, working across InVision Studio, GitHub & Jira integrations, Inspect, and Inspect Motion.</p>
-		<p>I got my start in product design at IBM, where I contributed to a variety of enterprise software product releases across different organizations during my 4.5 year tenure. During that time, I also had the unique opportunity to contract with Apple in Cupertino where I focused on prototyping apps for the Apple at Work program.</p>
+		<p>Before The.com, I was the founding designer for QA Wolf. I helped take their existing CLI tool from 0–1, designing a web app & platform for QA Engineers to automate their end-to-end browser testing. I also designed the documentation website, marketing website, and helped develop the pricing structure that led to the first cohort of paying customers.</p>
+		<p>Prior to that, I designed tools to improve designer & developer collaboration at InVision, working across InVision Studio, Inspect, Inspect Motion, and GitHub & Jira integrations.</p>
+		<p>I got my start in product design at IBM, where I contributed to a variety of enterprise software product releases across different organizations during my four-and-a-half-year tenure. During that time, I also had the unique opportunity to contract with Apple, where I focused on prototyping apps for the Apple at Work program.</p>
 		<h2>Work</h2>
 		<ul role="list" class="list-strip">
 			<div class="list-item--bordered">
@@ -150,11 +150,18 @@ import Layout from '../layouts/Layout.astro';
 	}
 	
 	.list-item--date {
+		display: none;
 		flex: none;
 		color: var(--color-text-3);
 		text-align: right;
 		font-family: var(--font-mono);
 		font-size: 15px;
+	}
+
+	@media only screen and (min-width: 408px) {
+		.list-item--date {
+			display: block;
+		}
 	}
 
 	@media only screen and (min-width: 560px) {
