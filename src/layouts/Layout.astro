@@ -31,6 +31,8 @@ const { title } = Astro.props;
 		--spacing-48: 48px;
 		--spacing-64: 64px;
 		--spacing-80: 80px;
+		--spacing-120: 120px;
+		--spacing-160: 160px;
 
 		--font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
@@ -53,7 +55,7 @@ const { title } = Astro.props;
 		--color-border: #e6e6e6;
 		--color-pressed: #d6d6d6;
 
-		--layout-max-width: 672px;
+		--layout-max-width: 720px;
 	}
 
 	html {
@@ -74,7 +76,7 @@ const { title } = Astro.props;
 
 	:global(main) {
 		margin: auto;
-		padding: var(--spacing-64) var(--spacing-24);
+		padding: var(--spacing-120) var(--spacing-24) var(--spacing-48) var(--spacing-24);
 		max-width: var(--layout-max-width);
 	}
 
@@ -151,6 +153,10 @@ const { title } = Astro.props;
 			--line-height-h3: 32px;
 			--line-height-h2: 40px;
 			--line-height-h1: 48px;
+		}
+
+		:global(main) {
+			padding: var(--spacing-160) var(--spacing-48) var(--spacing-64) var(--spacing-48);
 		}
 	}
 </style>
