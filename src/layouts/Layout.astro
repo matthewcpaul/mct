@@ -75,9 +75,12 @@ const { title } = Astro.props;
 	}
 
 	:global(main) {
-		margin: auto;
 		padding: var(--spacing-120) var(--spacing-24) var(--spacing-48) var(--spacing-24);
+	}
+
+	:global(article) {
 		max-width: var(--layout-max-width);
+		margin: auto;
 	}
 
 	:global(h1) {
